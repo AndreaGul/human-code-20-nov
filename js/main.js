@@ -3,16 +3,29 @@
 // stampa(): scrivere una funzione che, dato un array in input, restituisca una stringa contenente tutti gli elementi dell'array, separati da una virgola
 // defisco una funzione stampa, array tot elementi e la stampiamo
 
-function stampa() {
-  //definisco un array
-  const elementi = [1, 2, 3, 4, 5];
+//definisco un array
+const elementi = [1, 2, 3, 4, 5];
 
+function stampa(array) {
+  let stringa = '';
+
+  //opziona cheattata
   //stampo l'array in console
-  console.log(`${elementi}`);
+  console.log(`${array}`);
+
+  //opzione legit
+  for (let i = 0; i < array.length; i++) {
+    if (i === array.length - 1) {
+      stringa += array[i];
+    } else {
+      stringa += array[i] + '-';
+    }
+  }
+  console.log(stringa);
 }
 
 //richiamo la funzione
-stampa();
+stampa(elementi);
 
 // unisci(): scrivere una funzione che, dati due array A e B in input, restituisca un nuovo array C con tutti gli elementi di A e B
 // creaiamo due array A e B e la somma tra i due la mettiamo in C
